@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="weight" placeholder="Enter you Weight(Kg)">
+    <input type="number" id="height" placeholder="Enter you Height(Meter)">
+   <!-- <select id="Adult" name="Adult/!" >
+     <option value="0">Age From 2-20 Years</option>
+        <option value="1">Age Greaater than 20</option>  
+      </select>-->
+   <!---- <select id="gender" name="gender">
+       <option value="0">Male</option>
+        <option value="1">Female</option>  
+      </select> -->
+
+
+    <button onclick="calc()">Enter</button>
+    <p id="Result"></p>
+
+    <script>
+        function calc(){
+            let w = document.getElementById("weight").value;
+            let b = document.getElementById("height").value;
+           // let g = document.getElementById("gender").value;
+           // let a = document.getElementById("Adult").value;
+
+            w=Number(w);
+            b=Number(b);
+           let h=b*b;
+           cal1=w/h;
+          // cal2=cal1/100
+
+           //console.log(a);
+
+
+  
+           //if(a==1){
+
+          //  if(cal1){
+              if(cal1<=18.5 && cal1>0){
+              document.getElementById("Result").innerHTML ="You are Underweight your risk level is high,You may be malnutrition";
+            }
+            else if(cal1<=22.9 && cal1>18.5){
+               document.getElementById("Result").innerHTML ="You are Normal(Healthy) your risk level is low";
+            }
+            else if(cal1<=24.9 && cal1>22.9){
+                document.getElementById("Result").innerHTML ="You are Overweight your risk level is Moderate";
+            }
+            else{
+              document.getElementById("Result").innerHTML ="You are obese your risk level is High ,You may be diabetes, CVD";
+             }
+
+
+          ///}else{
+          //  if(cal2<=5 && cal2>0){
+            //  document.getElementById("Result").innerHTML ="You are Underweight your risk level is high,You may be malnutrition";
+            //}
+            //else if(calc2<=85 && cal2>5){
+              // document.getElementById("Result").innerHTML ="You are Normal(Healthy) your risk level is low";
+            //}
+            //else if(calc2<=95 && cal2>85){
+              //  document.getElementById("Result").innerHTML ="You are Overweight your risk level is Moderate";
+            //}
+            //else{
+              //document.getElementById("Result").innerHTML ="You are obese your risk level is High ,You may be diabetes, CVD";
+            //}
+          }
+        
+           
+          
+    </script>
+</body>
+</html>
